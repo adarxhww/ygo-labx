@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -27,7 +28,7 @@ function NavItem({
   icon,
   exact = false,
   badge,
-}: NavItemProps) {
+  }: NavItemProps) {
   const pathname = usePathname();
 
   const isActive = exact
@@ -47,9 +48,8 @@ function NavItem({
         {icon}
       </span>
 
-      <span className="min-w-0 flex-1">
-        {label}
-      </span>
+      <span className="min-w-0 flex-1">{label}</span>
+
 
       {badge !== undefined && badge > 0 && (
         <span
@@ -68,16 +68,8 @@ function NavItem({
 
 function DashboardIcon() {
   return (
-    <svg
-      width="18"
-      height="18"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <rect x="3" y="3" width="7" height="7" rx="1" />
       <rect x="14" y="3" width="7" height="7" rx="1" />
       <rect x="3" y="14" width="7" height="7" rx="1" />
@@ -88,16 +80,8 @@ function DashboardIcon() {
 
 function MarketsIcon() {
   return (
-    <svg
-      width="18"
-      height="18"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M4 19V5" />
       <path d="M4 19h16" />
       <path d="M7 15V9" />
@@ -109,18 +93,35 @@ function MarketsIcon() {
   );
 }
 
+function WatchlistIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z" />
+    </svg>
+  );
+}
+
+function OptionChainIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 21V3" />
+      <path d="M3 21h18" />
+      <path d="M7 7v6" />
+      <rect x="5.5" y="9" width="3" height="3" rx=".5" />
+      <path d="M13 4v10" />
+      <rect x="11.5" y="6" width="3" height="5" rx=".5" />
+      <path d="M19 11v7" />
+      <rect x="17.5" y="13" width="3" height="3" rx=".5" />
+    </svg>
+  );
+}
+
 function TradeIcon() {
   return (
-    <svg
-      width="18"
-      height="18"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M7 7h10" />
       <path d="m13 3 4 4-4 4" />
       <path d="M17 17H7" />
@@ -131,25 +132,11 @@ function TradeIcon() {
 
 function PortfolioIcon() {
   return (
-    <svg
-      width="18"
-      height="18"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M3 7h18" />
       <path d="M5 7V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v2" />
-      <rect
-        x="3"
-        y="7"
-        width="18"
-        height="13"
-        rx="2"
-      />
+      <rect x="3" y="7" width="18" height="13" rx="2" />
       <path d="M15 13h3" />
     </svg>
   );
@@ -157,16 +144,8 @@ function PortfolioIcon() {
 
 function OrdersIcon() {
   return (
-    <svg
-      width="18"
-      height="18"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M8 6h13" />
       <path d="M8 12h13" />
       <path d="M8 18h13" />
@@ -179,16 +158,8 @@ function OrdersIcon() {
 
 function JournalIcon() {
   return (
-    <svg
-      width="18"
-      height="18"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M4 4h16v16H4z" />
       <path d="M8 8h8" />
       <path d="M8 12h8" />
@@ -199,55 +170,33 @@ function JournalIcon() {
 
 function AnalyticsIcon() {
   return (
-    <svg
-      width="18"
-      height="18"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M4 19V5" />
       <path d="M4 19h16" />
-      <rect
-        x="7"
-        y="13"
-        width="3"
-        height="4"
-        rx="0.5"
-      />
-      <rect
-        x="12"
-        y="9"
-        width="3"
-        height="8"
-        rx="0.5"
-      />
-      <rect
-        x="17"
-        y="5"
-        width="3"
-        height="12"
-        rx="0.5"
-      />
+      <rect x="7" y="13" width="3" height="4" rx="0.5" />
+      <rect x="12" y="9" width="3" height="8" rx="0.5" />
+      <rect x="17" y="5" width="3" height="12" rx="0.5" />
+    </svg>
+  );
+}
+
+function AlgotestIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M9 3h6" />
+      <path d="M10 3v6l-5.5 9.2A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-2.8L14 9V3" />
+      <path d="M8 15h8" />
+      <path d="m10 18 1.5-1.5L13 18l2-2" />
     </svg>
   );
 }
 
 function LearnIcon() {
   return (
-    <svg
-      width="18"
-      height="18"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="m4 6 8-3 8 3-8 3-8-3Z" />
       <path d="M6 9v5c0 2 2.7 4 6 4s6-2 6-4V9" />
       <path d="M20 7v6" />
@@ -257,16 +206,8 @@ function LearnIcon() {
 
 function CommunityIcon() {
   return (
-    <svg
-      width="18"
-      height="18"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
       <circle cx="9" cy="7" r="4" />
       <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
@@ -275,18 +216,24 @@ function CommunityIcon() {
   );
 }
 
+function AnalystCommunityIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="9" cy="7" r="3.5" />
+      <path d="M2 20v-2a7 7 0 0 1 12-4.9" />
+      <path d="M16 11h5" />
+      <path d="M18.5 8.5v5" />
+      <path d="M15 17h7" />
+      <path d="M15 20h5" />
+    </svg>
+  );
+}
+
 function ChallengesIcon() {
   return (
-    <svg
-      width="18"
-      height="18"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M8 21h8" />
       <path d="M12 17v4" />
       <path d="M7 4h10" />
@@ -299,16 +246,8 @@ function ChallengesIcon() {
 
 function NotificationsIcon() {
   return (
-    <svg
-      width="18"
-      height="18"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9" />
       <path d="M13.73 21a2 2 0 0 1-3.46 0" />
     </svg>
@@ -317,16 +256,8 @@ function NotificationsIcon() {
 
 function ProfileIcon() {
   return (
-    <svg
-      width="18"
-      height="18"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <circle cx="12" cy="8" r="4" />
       <path d="M4 21c1.5-4 4-6 8-6s6.5 2 8 6" />
     </svg>
@@ -335,16 +266,8 @@ function ProfileIcon() {
 
 function LogoutIcon() {
   return (
-    <svg
-      width="18"
-      height="18"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M10 17l5-5-5-5" />
       <path d="M15 12H3" />
       <path d="M21 19V5a2 2 0 0 0-2-2h-6" />
@@ -359,96 +282,62 @@ function getInitials(name: string) {
     return "U";
   }
 
-  const parts = trimmedName
-    .split(/\s+/)
-    .filter(Boolean);
+  const parts = trimmedName.split(/\s+/).filter(Boolean);
 
   if (parts.length === 1) {
-    return parts[0]
-      .slice(0, 2)
-      .toUpperCase();
+    return parts[0].slice(0, 2).toUpperCase();
   }
 
-  return `${parts[0][0]}${parts[parts.length - 1][0]}`
-    .toUpperCase();
+  return `${parts[0][0]}${parts[parts.length - 1][0]}`.toUpperCase();
 }
 
 export default function AppSidebar() {
   const router = useRouter();
   const pathname = usePathname();
 
-  const [isLoggingOut, setIsLoggingOut] =
-    useState(false);
-
-  const [unreadNotifications, setUnreadNotifications] =
-    useState(0);
-
-  const [currentUser, setCurrentUser] =
-    useState<CurrentUser | null>(null);
+  const [isLoggingOut, setIsLoggingOut] = useState(false);
+  const [unreadNotifications, setUnreadNotifications] = useState(0);
+  const [currentUser, setCurrentUser] = useState<CurrentUser | null>(null);
 
   async function loadCurrentUser() {
     try {
-      const response = await fetch(
-        "/api/v1/auth/me",
-        {
-          method: "GET",
-          cache: "no-store",
-        }
-      );
+      const response = await fetch("/api/v1/auth/me", {
+        method: "GET",
+        cache: "no-store",
+      });
 
-      if (!response.ok) {
-        return;
-      }
+      if (!response.ok) return;
 
       const data = await response.json();
 
-      if (!data.success || !data.user) {
-        return;
-      }
+      if (!data.success || !data.user) return;
 
       setCurrentUser(data.user);
     } catch (error) {
-      console.error(
-        "Failed to load current user:",
-        error
-      );
+      console.error("Failed to load current user:", error);
     }
   }
 
   async function loadUnreadNotifications() {
     try {
-      const response = await fetch(
-        "/api/v1/notifications",
-        {
-          cache: "no-store",
-        }
-      );
+      const response = await fetch("/api/v1/notifications", {
+        cache: "no-store",
+      });
 
-      if (!response.ok) {
-        return;
-      }
+      if (!response.ok) return;
 
       const data = await response.json();
 
-      if (!data.success) {
-        return;
-      }
+      if (!data.success) return;
 
-      setUnreadNotifications(
-        Number(data.unreadCount) || 0
-      );
+      setUnreadNotifications(Number(data.unreadCount) || 0);
     } catch (error) {
-      console.error(
-        "Failed to load notification count:",
-        error
-      );
+      console.error("Failed to load notification count:", error);
     }
   }
 
   useEffect(() => {
-    if (pathname === "/login") {
-      return;
-    }
+    if (pathname === "/login") return;
 
     loadCurrentUser();
     loadUnreadNotifications();
@@ -458,30 +347,21 @@ export default function AppSidebar() {
       loadUnreadNotifications();
     }, 30000);
 
-    return () => {
-      window.clearInterval(interval);
-    };
+    return () => window.clearInterval(interval);
   }, [pathname]);
 
   async function handleLogout() {
-    if (isLoggingOut) {
-      return;
-    }
+    if (isLoggingOut) return;
 
     setIsLoggingOut(true);
 
     try {
-      const response = await fetch(
-        "/api/v1/auth/logout",
-        {
-          method: "POST",
-        }
-      );
+      const response = await fetch("/api/v1/auth/logout", {
+        method: "POST",
+      });
 
       if (!response.ok) {
-        throw new Error(
-          "Logout request failed"
-        );
+        throw new Error("Logout request failed");
       }
 
       router.replace("/login");
@@ -492,13 +372,9 @@ export default function AppSidebar() {
     }
   }
 
-  if (pathname === "/login") {
-    return null;
-  }
+  if (pathname === "/login") return null;
 
-  const displayName =
-    currentUser?.displayName ?? "Loading...";
-
+  const displayName = currentUser?.displayName ?? "Loading...";
   const initials = currentUser
     ? getInitials(currentUser.displayName)
     : "…";
@@ -507,10 +383,7 @@ export default function AppSidebar() {
     <aside className="fixed inset-y-0 left-0 z-40 flex w-[250px] flex-col border-r border-slate-200 bg-white">
       {/* Brand */}
       <div className="flex h-[76px] items-center border-b border-slate-100 px-5">
-        <Link
-          href="/"
-          className="flex items-center gap-3"
-        >
+        <Link href="/" className="flex items-center gap-3">
           <div className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-slate-900">
             <Image
               src="/logo.png"
@@ -526,7 +399,6 @@ export default function AppSidebar() {
             <div className="text-[15px] font-bold text-slate-900">
               YGO TradeLab
             </div>
-
             <div className="text-xs font-medium text-slate-400">
               Sim
             </div>
@@ -543,36 +415,13 @@ export default function AppSidebar() {
           </p>
 
           <div className="space-y-1">
-            <NavItem
-              href="/"
-              label="Dashboard"
-              exact
-              icon={<DashboardIcon />}
-            />
-
-            <NavItem
-              href="/markets"
-              label="Markets"
-              icon={<MarketsIcon />}
-            />
-
-            <NavItem
-              href="/trade"
-              label="Trade"
-              icon={<TradeIcon />}
-            />
-
-            <NavItem
-              href="/portfolio"
-              label="Portfolio"
-              icon={<PortfolioIcon />}
-            />
-
-            <NavItem
-              href="/orders"
-              label="Orders"
-              icon={<OrdersIcon />}
-            />
+            <NavItem href="/" label="Dashboard" exact icon={<DashboardIcon />} />
+            <NavItem href="/markets" label="Markets" icon={<MarketsIcon />} />
+            <NavItem href="/watchlist" label="Watchlist" icon={<WatchlistIcon />}  />
+            <NavItem href="/option-chain" label="Option Chain" icon={<OptionChainIcon />}  />
+            <NavItem href="/trade" label="Trade" icon={<TradeIcon />} />
+            <NavItem href="/portfolio" label="Portfolio" icon={<PortfolioIcon />} />
+            <NavItem href="/orders" label="Orders" icon={<OrdersIcon />} />
           </div>
         </div>
 
@@ -583,23 +432,10 @@ export default function AppSidebar() {
           </p>
 
           <div className="space-y-1">
-            <NavItem
-              href="/journal"
-              label="Journal"
-              icon={<JournalIcon />}
-            />
-
-            <NavItem
-              href="/analytics"
-              label="Analytics"
-              icon={<AnalyticsIcon />}
-            />
-
-            <NavItem
-              href="/learn"
-              label="Learn"
-              icon={<LearnIcon />}
-            />
+            <NavItem href="/journal" label="Journal" icon={<JournalIcon />} />
+            <NavItem href="/analytics" label="Analytics" icon={<AnalyticsIcon />} />
+            <NavItem href="/algotest" label="Algotest" icon={<AlgotestIcon />} />
+            <NavItem href="/learn" label="Learn" icon={<LearnIcon />} />
           </div>
         </div>
 
@@ -610,17 +446,13 @@ export default function AppSidebar() {
           </p>
 
           <div className="space-y-1">
+            <NavItem href="/community" label="Community" icon={<CommunityIcon />} />
             <NavItem
-              href="/community"
-              label="Community"
-              icon={<CommunityIcon />}
+              href="/analyst-community"
+              label="Analyst Community"
+              icon={<AnalystCommunityIcon />}
             />
-
-            <NavItem
-              href="/challenges"
-              label="Challenges"
-              icon={<ChallengesIcon />}
-            />
+            <NavItem href="/challenges" label="Challenges" icon={<ChallengesIcon />} />
           </div>
         </div>
 
@@ -637,12 +469,7 @@ export default function AppSidebar() {
               icon={<NotificationsIcon />}
               badge={unreadNotifications}
             />
-
-            <NavItem
-              href="/profile"
-              label="Profile"
-              icon={<ProfileIcon />}
-            />
+            <NavItem href="/profile" label="Profile" icon={<ProfileIcon />} />
           </div>
         </div>
       </nav>
@@ -650,7 +477,6 @@ export default function AppSidebar() {
       {/* User Profile */}
       <div className="border-t border-slate-100 p-3">
         <div className="mb-2 flex items-center gap-3 rounded-xl bg-slate-50 px-3 py-3">
-          {/* User initials / avatar */}
           <div className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full bg-slate-100 text-xs font-bold text-slate-700">
             {currentUser?.avatarUrl ? (
               <Image
@@ -665,12 +491,10 @@ export default function AppSidebar() {
             )}
           </div>
 
-          {/* User information */}
           <div className="min-w-0">
             <p className="truncate text-sm font-semibold text-slate-900">
               {displayName}
             </p>
-
             <p className="truncate text-xs text-slate-400">
               Simulated account
             </p>
@@ -689,9 +513,7 @@ export default function AppSidebar() {
           </span>
 
           <span>
-            {isLoggingOut
-              ? "Logging out..."
-              : "Logout"}
+            {isLoggingOut ? "Logging out..." : "Logout"}
           </span>
         </button>
       </div>
